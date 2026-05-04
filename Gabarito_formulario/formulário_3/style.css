@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root{
+    --bordaCor: #334155;
+    --background: #0f172a;
+    --backgroundInput: #1e293b;
+    --colorText: #e2e8f0;
+    --borderRadiusTamanho: 0.4vw;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--colorText);
+}
+
+header h1{
+    text-align: center;
+    font-size: 1.3vw;
+    margin-bottom: 3%;
+}
+
+form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.perguntas{
+    margin-bottom: 1%;
+}
+
+.perguntas label{
+    font-size: 1vw;
+}
+
+fieldset{
+    border: 2px solid var(--bordaCor);
+    border-radius: var(--borderRadiusTamanho);
+}
+
+legend{
+    font-size: 1vw;
+    margin-bottom: 1%;
+    margin-left: 20px;
+}
+
+.perguntas div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+}
+
+.perguntas input{
+    background-color: var(--backgroundInput);
+    border: 2px solid var(--bordaCor);
+    height: 2vw;
+    padding-left: 1.3%;
+    border-radius: var(--borderRadiusTamanho);
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    color: var(--colorText);
+    font-size: 0.8vw;
+}
+
+.perguntas div input{
+    padding-left: 3%;
+}
+
+fieldset section{
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 2%;
+}
+
+fieldset section .grid2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid2 input{
+    padding-left: 5%;
+}
+
+.grid2 select{
+    background-color: var(--backgroundInput);
+    border: 2px solid var(--bordaCor);
+    color: var(--colorText);
+    font-size: 0.8vw;
+    border-radius: var(--borderRadiusTamanho);
+}
+
+.perguntas .grid3{
+    border-radius: 7px;
+    width: 70%;
+    padding-left: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.perguntas .grid3 label{
+    font-size: 1.2vw;
+}
+
+.perguntas .grid3 input{
+    width: 0.8vw;
+    margin: 0 auto;
+}
+
+.file p{
+    font-size: 0.8vw;
+    color: #94a3b8;
+}
+
+.file input{
+    margin-top: 1%;
+}
+
+textarea{
+    height: 100px;
+    width: 100%;
+    resize: vertical;
+    background-color: var(--backgroundInput);
+    border: 2px solid var(--bordaCor);
+    border-radius: var(--borderRadiusTamanho);
+    color: white;
+}
+
+button{
+    width: 100%;
+    margin: 10px auto;
+    display: block;
+    height: 2vw;
+    border-radius: var(--borderRadiusTamanho);
+    background-color: #3b82f6;
+    color: var(--colorText);
+    font-size: 1vw;
+}
+
+@media (max-width: 900px){
+    .perguntas .grid2{
+        grid-template-columns: 1fr 1fr;
+    }
+    form{
+        width: 90%;
+    }
+    header h1{
+        text-align: center;
+        font-size: 3vw;
+        margin-bottom: 3%;
+    }
+    .perguntas label{
+        font-size: 2vw;
+    }
+    .perguntas input{
+        height: 4vw;
+        font-size: 1.8vw;
+    }
+    legend{
+        font-size: 2vw;
+    }
+    .perguntas .grid3{
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .perguntas .grid3 label{
+        font-size: 2.2vw;
+    }
+
+    .perguntas .grid3 input{
+        width: 1.5vw;
+    }
+    .file p{
+        font-size: 1.5vw;
+    }
+    button{
+        height: 4vw;
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 468px){
+    .perguntas div, .perguntas .grid2{
+        grid-template-columns: 1fr;
+    }
+    .perguntas .grid3{
+        grid-template-columns: 1fr 1fr;
+    }
+}

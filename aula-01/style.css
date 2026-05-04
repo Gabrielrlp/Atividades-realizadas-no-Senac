@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+header {
+  background-color: #1f3c88; /*mudar a cor do fundo do cabeçalho*/
+  padding: 20px;
+  color: white;
+}
+
+.header-container {
+  max-width: 90%;
+  margin: auto;
+  display: flex; /*para o conteudo ficar flexivel*/
+  justify-content: space-between; /*espaçamento entre elementos*/
+  align-items: center; /*alinhamento vertical*/
+}
+
+.logo {
+  font-family: sans-serif; /*para definir a fonte da ecrita*/
+  font-size: 22px;
+  font-weight: 700; /*aumentar a grossura da palara*/
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+main {
+  max-width: 80%;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.hero {
+  margin-bottom: 40px; /*ela cria uma distancia entre os textos escritos um encima do outro*/
+  background-color: #2a4fb3;
+  text-align: center;
+  color: white;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.participantes {
+  margin-bottom: 40px;
+  background-color: #2a4fb3;
+  text-align: center;
+  color: white;
+  padding: 50px;
+  border-radius: 8px;
+}
+
+.participantes h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}

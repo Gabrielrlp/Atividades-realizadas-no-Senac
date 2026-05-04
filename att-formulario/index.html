@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario de Candidatura a CV</h1>
+    </header>
+    <main>
+        <form id="perguntas">
+            <section class="form">
+                <label>1. Nome Completo*</label>
+                <div class="grid-2">
+                    <input id="nome" type="text" placeholder="Primeiro nome" required>
+                    <input id="sobrenome" type="text" placeholder="Ultimo nome" required>
+                </div>
+            </section>
+            <section class="form">
+                <label for="email">2. Email*</label>
+                <input id="email" type="text" placeholder="email" required>
+            </section>
+            <section class="form">
+                <label for="contato">3. Número de contato*</label>
+                <input id="contato" type="text" placeholder="(34 99999-9999)" required>
+            </section>
+            <section class="form">
+                <label for="endereco">4. Endereço*</label>
+                <div class="grid-4">
+                    <input id="endereco" class="full" type="text" placeholder="Digite o Endereço" required>
+                    <input id="cidade" type="text" placeholder="Cidade" required>
+                    <input id="estado" type="text" placeholder="Estado" required>
+                    <input id="cep" type="text" placeholder="CEP" required>
+                    <select id="pais">
+                        <option>Selecione um país</option>
+                        <option>Brasil</option>
+                        <option>Portugal</option>
+                    </select>
+                </div>
+            </section>
+            <section class="form">
+                <label for="concorrendo">5. *Para qual posição voce está concorrendo?</label>
+                <input id="concorrendo" type="text" placeholder="Desenvolvedor Front-end" required>
+            </section>
+            <section class="form">
+                <label for="data">6. Data de inicio dísponivel*</label>
+                <input id="data" type="date" required>
+            </section>
+            <section class="form">
+                <fieldset>
+                    <legend>7. Qual é a sua situação profissional</legend>
+                    <label>
+                        <input type="radio" name="situacao" value="empregado" required>Empregado
+                    </label>
+                    <label>
+                        <input type="radio" name="situacao" value="desempregado">Desempregado
+                    </label>
+                    <label>
+                        <input type="radio" name="situacao" value="autonomo">Autônomo
+                    </label>
+                    <label>
+                        <input type="radio" name="situacao" value="aluno">Aluno
+                    </label>
+                    <label>
+                        <input type="radio" name="situacao" value="outros">Outros
+                    </label>
+                </fieldset>
+            </section>
+            <section class="form">
+                <label for="curriculo">8. Envie seu currículo</label>
+                <p>Apenas PDF,DOC,DOCX,XLS,XLSX,PPT,PPTX.</p>
+                <input id="curriculo" type="file" multiple accept=".pdf, .dpc, .docx, .xls, .sxls, .ppt, .pptx">
+            </section>
+            <section class="form">
+                <label for="testemunhos">9. Outros testemunhos</label>
+                <input id="testemunhos" type="file" multiple>
+            </section>
+            <section class="form">
+                <label for="notas">10. Notas, perguntas e sugestões</label>
+                <textarea name="notas" id="notas"></textarea>
+            </section>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

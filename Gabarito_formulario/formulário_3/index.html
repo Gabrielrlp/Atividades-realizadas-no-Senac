@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Formulário de Candidatura a CV</h1>
+    </header>
+    <main>
+        <form id="meuform">
+            <section class="perguntas">
+                <label for="FirstName">1.Nome completo*</label>
+                <div class="grid1">
+                    <input type="text" placeholder="Primeiro nome" id="FirstName" name="FirstName" required>
+                    <input type="text" placeholder="Segundo nome" id="SecondName" name="SecondName" required>
+                </div>
+            </section>
+            <section class="perguntas">
+                <label for="email">2.Email*</label>
+                <input type="email" placeholder="email" id="email" name="email" required>
+            </section>
+            <section class="perguntas">
+                <label for="contato">3. Número de contato*</label>
+                <input type="tel" placeholder="(34)99999-9999" id="contato" name="contato" required>
+            </section>
+            <fieldset class="perguntas">
+                <legend for="endereco">4. Endereço*</legend>
+                <section>
+                    <input type="text" placeholder="Endereço da rua" id="endereco" name="endereco" required>
+                    <div class="grid2">
+                        <input type="text" placeholder="Cidade" name="Cidade" required>
+                        <input type="text" placeholder="Estado" name="Estado" required>
+                        <input type="text" placeholder="CEP" name="CEP" inputmode="numeric" pattern="[0-9]{5}-?[0-9]{3}" title="Digite um CEP válido: 12345-678 ou 12345678" required>
+                        <select name="País" id="País">
+                            <option value="Nenhum">Selecione um pais</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Portugal">Portugal</option>
+                        </select>
+                    </div>
+                </section>
+            </fieldset>
+            <section class="perguntas">
+                <label for="posicao">5. Para qual posição você está concorrendo?*</label>
+                <input type="text" placeholder="Desenvolvedor Front-end" id="posicao" name="posicao" required>
+            </section>
+            <section class="perguntas">
+                <label for="data">6. Data de inicio disponivel?*</label>
+                <input type="date" placeholder="dd/mm/aaaa" id="data" name="data" required>
+            </section> 
+            <fieldset class="perguntas">
+                <legend>7. Qual é a sua situação profissional atual?</legend>
+                <div class="grid3">
+                    <label for="Empregado">Empregado</label>
+                    <input type="radio" required name="situacao" id="Empregado" value="Empregado">
+                    <label for="Desempregado">Desempregado</label>
+                    <input type="radio" required name="situacao" id="Desempregado" value="Desempregado">
+                    <label for="PorConta">Trabalhadores por conta própria</label>
+                    <input type="radio" required name="situacao" id="PorConta" value="PorConta">
+                    <label for="Aluno">Aluno</label>
+                    <input type="radio" required name="situacao" id="Aluno" value="Aluno">
+                    <label for="Outros">Outros</label>
+                    <input type="radio" required name="situacao" id="Outros" value="Outros">
+                </div>
+            </fieldset>
+            <section class="perguntas file">
+                <label for="curriculo">8. Envie o seu currículo</label>
+                <p>Apenas PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX</p>
+                <input type="file" id="curriculo" name="curriculo" required>
+            </section>
+            <section class="perguntas file">
+                <label for="testemunhos">9. Outros testemunhos</label>
+                <input type="file" required name="testemunhos" id="testemunhos">
+            </section>
+            <section class="perguntas outros">
+                <label for="sugestoes">10. Notas, perguntas e sugestões</label>
+                <textarea name="sugestoes" name="sugestoes" id="sugestoes"></textarea>
+            </section>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

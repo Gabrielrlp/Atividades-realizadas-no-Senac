@@ -1,0 +1,20 @@
+const form = document.querySelector("#meuForm");
+const candidatos = JSON.parse(localStorage.getItem("Candidatos"));
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const dados = new FormData(form);
+
+    const candidato = Object.fromEntries(dados.entries());
+
+    candidatos.push(candidato);
+
+    localStorage.setItem("Candidatos", JSON.stringify(candidatos));
+    alert("Candidato cadastrado com sucesso");
+
+    form.reset();
+})
+
+console.log(candidatos);
+console.log(candidatos[0]);

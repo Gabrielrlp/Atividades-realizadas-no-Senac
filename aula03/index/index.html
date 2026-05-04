@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>Formulário de Candidatura a CV</h1>
+      <form id="formulario">
+        <p>1.Nome completo*</p>
+        <div>
+          <label>
+            <input type="text" placeholder="Primeiro nome" class="nome1" name="nome" />
+            <input type="text" placeholder="Ultimo nome" class="nome2" name="sobrenome"/>
+          </label>
+        </div>
+
+        <p>2.Email</p>
+        <div>
+          <label>
+            <input class="estenso email" type="text" placeholder="email" name="email" />
+          </label>
+        </div>
+
+        <p>3.Número de contato*</p>
+        <div>
+          <label>
+            <input
+              class="estenso telefone"
+              type="text"
+              placeholder="(34) 99999-9999"
+              name="telefone"
+            />
+          </label>
+        </div>
+
+        <p>4.Endereço*</p>
+        <div>
+          <input class="estenso" type="text" placeholder="Endereço da rua" name="rua" />
+          <div>
+            <input type="text" placeholder="Cidade" name="cidade" />
+            <input type="text" placeholder="Estado" name="estado" />
+            <input type="text" placeholder="CEP" name="cep" />
+            <select class="paises" name="pais">
+              <option>Selecione um país</option>
+              <option>Brasil</option>
+              <option>Portugal</option>
+              <option>Estados Unidos</option>
+            </select>
+          </div>
+        </div>
+
+        <p>5.*Para qual posição você está concorrendo</p>
+        <div>
+          <input
+            class="estenso"
+            type="text"
+            placeholder="Desenvolvedor Front-end"
+            name="vaga"
+          />
+        </div>
+
+        <p>6.Data de ínicio disponível</p>
+        <div>
+          <input class="estenso" type="date" name="data_inicio" />
+        </div>
+
+        <p>7.Qual é a sua situação profissional atual?</p>
+        <div>
+          <fieldset class="lista">
+            <label class="list">
+              Empregado
+              <input type="radio" name="situacao" value="empregado" />
+            </label>
+            <label class="list">
+              Desempregado
+              <input type="radio" name="situacao" value="desempregado" />
+            </label>
+            <label class="list">
+              Trabalho por conta própria
+              <input type="radio" name="situacao" value="autonomo" />
+            </label>
+            <label class="list">
+              Aluno
+              <input type="radio" name="situacao" value="aluno" />
+            </label>
+            <label class="list">
+              Outros
+              <input type="radio" name="situacao" value="outros" />
+            </label>
+          </fieldset>
+        </div>
+
+        <p>8.Envie seu currículo</p>
+        <div>
+          <input type="file" class="estenso" name="curriculo" />
+        </div>
+
+        <p>9.Outros testemunhos</p>
+        <div>
+          <input type="file" class="estenso" name="testemunhos" />
+        </div>
+
+        <p>10.Notas,perguntas e sugestões</p>
+        <div>
+          <input type="text" class="caixa-grande" name="mensagem" />
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+    <footer></footer>
+
+    <script src="/script/script.js"></script>
+  </body>
+</html>
